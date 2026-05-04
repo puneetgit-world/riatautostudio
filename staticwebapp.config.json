@@ -1,13 +1,8 @@
 {
   "routes": [
     {
-      "route": "/*",
-      "serve": "/index.html",
-      "statusCode": 200
-    },
-    {
-      "route": "/api/*",
-      "serve": "/api/index.js",
+      "route": "/*.{css,js,svg,ico,jpg,jpeg,png,gif,webp,woff,woff2}",
+      "serve": "/*",
       "statusCode": 200
     },
     {
@@ -16,8 +11,8 @@
       "statusCode": 200
     },
     {
-      "route": "/*.{css,js,svg,ico,jpg,jpeg,png,gif,webp,woff,woff2}",
-      "serve": "/*",
+      "route": "/*",
+      "serve": "/index.html",
       "statusCode": 200
     }
   ],
