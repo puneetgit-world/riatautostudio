@@ -16,12 +16,7 @@
       "rewrite": "/index.html"
     }
   },
-  "globalHeaders": [
-    {
-      "path": "/*",
-      "headers": {
-        "Cache-Control": "no-cache"
-      }
-    }
-  ]
+  "globalHeaders": {
+    "Cache-Control": "no-cache"
+  }
 }
