@@ -1,0 +1,59 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    },
+    {
+      "route": "/api/*",
+      "serve": "/api/index.js",
+      "statusCode": 200
+    },
+    {
+      "route": "/images/*",
+      "serve": "/images/*",
+      "statusCode": 200
+    },
+    {
+      "route": "/*.{css,js,svg,ico,jpg,jpeg,png,gif,webp,woff,woff2}",
+      "serve": "/*",
+      "statusCode": 200
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html"
+    }
+  },
+  "globalHeaders": [
+    {
+      "path": "/*",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "geolocation=(), microphone=(), camera=()"
+      }
+    },
+    {
+      "path": "/images/*",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "path": "/*.{css,js}",
+      "headers": {
+        "Cache-Control": "public, max-age=604800"
+      }
+    },
+    {
+      "path": "/index.html",
+      "headers": {
+        "Cache-Control": "public, max-age=3600"
+      }
+    }
+  ]
+}

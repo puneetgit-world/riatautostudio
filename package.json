@@ -1,0 +1,28 @@
+{
+  "name": "riat-auto-studio",
+  "version": "1.0.0",
+  "description": "Professional car mechanic workshop website - Riat Auto Studio",
+  "private": true,
+  "keywords": [
+    "auto repair",
+    "mechanic",
+    "car service",
+    "adelaide",
+    "automotive"
+  ],
+  "author": "Arvinder Riat",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USERNAME/riat-auto-studio"
+  },
+  "scripts": {
+    "start": "open index.html",
+    "build": "echo 'No build step required for static site'",
+    "test": "echo 'No tests configured'",
+    "deploy": "git push origin main"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
