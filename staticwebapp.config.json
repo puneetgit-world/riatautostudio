@@ -1,10 +1,5 @@
 {
-  "routes": [
-    {
-      "route": "/images/*",
-      "serve": "/images/*",
-      "statusCode": 200
-    },
+  "routes": [   
     {
       "route": "/*",
       "serve": "/index.html",
@@ -17,6 +12,7 @@
     }
   },
   "globalHeaders": {
-    "Cache-Control": "no-cache"
+    "Cache-Control": "no-cache",
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.google.com/maps/; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://www.google.com/maps/"
   }
 }
